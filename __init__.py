@@ -13,6 +13,8 @@ def set_leds(mode, brightness):
     brightness = int(brightness) % 9
 
     if mode == 0 or brightness == 0:
+        for i in range(0, 4):
+            leds.set_rocket(i, 0)
         leds.clear()
     else:
         if mode >= 1:
